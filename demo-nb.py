@@ -5,7 +5,7 @@
 # COMMAND ----------
 
 # MAGIC %md 
-# MAGIC ####  3/ Working with Python modules
+# MAGIC #### Working with Python modules
 
 # COMMAND ----------
 
@@ -35,7 +35,7 @@ hmm()
 # COMMAND ----------
 
 import csv
-with open('winequality-red.csv', 'r') as file:
+with open('data/winequality-red.csv', 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         print(row)
@@ -43,12 +43,8 @@ with open('winequality-red.csv', 'r') as file:
 # COMMAND ----------
 
 import pandas as pd
-df= pd.read_csv("./winequality-red.csv")
+df= pd.read_csv("data/winequality-red.csv")
 
-
-# COMMAND ----------
-
-# MAGIC %sh cp /dbfs/databricks-datasets/wine-quality/winequality-white.csv data
 
 # COMMAND ----------
 
@@ -73,7 +69,7 @@ pip install -r requirements.txt
 
 import csv
 list=[6,0.31,0.47,3.6,0.067,18,42,0.99549,3.39,0.66,11,6]
-with open('winequality-red.csv', 'w') as file:
+with open('data/winequality-red.csv', 'w') as file:
     writer = csv.writer(file)
     writer.writerow(list)
 

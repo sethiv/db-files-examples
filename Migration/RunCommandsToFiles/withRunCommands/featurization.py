@@ -8,3 +8,7 @@ def continousToBinary(data, column_name):
   return data
     
   
+
+# COMMAND ----------
+
+
