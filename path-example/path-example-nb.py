@@ -1,5 +1,5 @@
 # Databricks notebook source
-# MAGIC %md Current working directotory in Repos is incluced in the Path
+# MAGIC %md Current working directory in Repos is incluced in the Path
 
 # COMMAND ----------
 
@@ -12,7 +12,11 @@ print("\n".join(sys.path))
 
 # COMMAND ----------
 
+from sample2 import hmm2
 
+# COMMAND ----------
+
+hmm2()
 
 # COMMAND ----------
 
@@ -28,3 +32,7 @@ sys.path.append(os.path.abspath('..'))
 # COMMAND ----------
 
 from sample import hmm
+
+# COMMAND ----------
+
+hmm()

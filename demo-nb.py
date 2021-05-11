@@ -17,7 +17,7 @@ hmm()
 
 # COMMAND ----------
 
-# MAGIC %md ****Path management****
+# MAGIC %md ****Managing Python paths****
 
 # COMMAND ----------
 
@@ -25,20 +25,8 @@ hmm()
 
 # COMMAND ----------
 
-# MAGIC %md ***Managing Python paths***
-
-# COMMAND ----------
-
-
-
-# COMMAND ----------
-
 # MAGIC %md
 # MAGIC #### 4/ Working with data files
-
-# COMMAND ----------
-
-# MAGIC %sh cp /dbfs/databricks-datasets/wine-quality/winequality-white.csv data
 
 # COMMAND ----------
 
@@ -57,6 +45,10 @@ with open('winequality-red.csv', 'r') as file:
 import pandas as pd
 df= pd.read_csv("./winequality-red.csv")
 
+
+# COMMAND ----------
+
+# MAGIC %sh cp /dbfs/databricks-datasets/wine-quality/winequality-white.csv data
 
 # COMMAND ----------
 
@@ -92,12 +84,4 @@ with open('winequality-red.csv', 'w') as file:
 
 # COMMAND ----------
 
-df=spark.read.csv("/winequality-red.csv")
-
-# COMMAND ----------
-
-df = spark.read.csv("dbfs:/Repos/vaibhav.sethi@databricks.com/sample_mod_vs/winequality-red.csv")
-
-# COMMAND ----------
-
-
+df=spark.read.csv("/data/winequality-red.csv")
