@@ -9,6 +9,10 @@
 
 # COMMAND ----------
 
+print("test")
+
+# COMMAND ----------
+
 from sample import hmm
 
 # COMMAND ----------
