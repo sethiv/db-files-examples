@@ -44,6 +44,7 @@ with open('data/winequality-red.csv', 'r') as file:
 
 import pandas as pd
 df= pd.read_csv("data/winequality-red.csv")
+display(df)
 
 
 # COMMAND ----------
@@ -54,6 +55,16 @@ df= pd.read_csv("data/winequality-red.csv")
 # COMMAND ----------
 
 pip install -r requirements.txt
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC File reads via Pyspark are now allowed
+
+# COMMAND ----------
+
+df=spark.read.csv("file:/Workspace/Repos/vaibhav.sethi@databricks.com/db-files-examples/data/winequality-red.csv")
+display(df)
 
 # COMMAND ----------
 
@@ -75,9 +86,18 @@ with open('data/winequality-red.csv', 'w') as file:
 
 # COMMAND ----------
 
-# MAGIC %md
-# MAGIC Cannot read a file via Pyspark
+import os
+os.getcwd()
 
 # COMMAND ----------
 
-df=spark.read.csv("/data/winequality-red.csv")
+import databricks.koalas as ks
+
+df= ks.read_csv("file:/Workspace/Repos/vaibhav.sethi@databricks.com/db-files-examples/data/winequality-red.csv")
+display(df)
+
+
+
+# COMMAND ----------
+
+
